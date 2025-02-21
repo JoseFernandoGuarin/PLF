@@ -1,0 +1,690 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>PRECISION LIVESTOCK FARMING</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="74b64c38-b34d-41b0-bea9-328a30c21610" class="page sans"><header><img class="page-cover-image" src="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/download.jpg" style="object-position:center 37.07%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/PrecisionListkFarm.jpg"/></div><h1 class="page-title"><mark class="highlight-brown_background"><strong>PRECISION LIVESTOCK FARMING</strong></mark></h1><p class="page-description"></p></header><div class="page-body"><div id="8f94d0ce-66af-4c91-bf82-201bc90cef06" class="column-list"><div id="7a7becfe-645c-4ff7-a56b-bd2593c2b465" style="width:37.5%" class="column"><figure id="9559dec8-612a-435d-8eb8-cfca25a781fd" class="image"><a href="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/logosimbolo-vertical-negro-png.png"><img style="width:192px" src="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/logosimbolo-vertical-negro-png.png"/></a></figure></div><div id="ea9079d8-aff8-4fc5-b0d2-d62e5b90dbb3" style="width:62.5%" class="column"><figure id="b42b56ca-a0e2-4b5f-878d-f0eb586af61e" class="image"><a href="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/IMG_6601.jpg"><img style="width:432px" src="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/IMG_6601.jpg"/></a></figure></div></div><h3 id="87826696-448f-476b-99f5-28f3ea1d18c6" class=""><mark class="highlight-teal">José F. Guarín Montoya, Ph.D.; Sebastián Bedoya Mazo, MS.; John-F. Ramirez-A, Ph.D.</mark></h3><p id="9eb769af-ab56-4b51-a599-19ad6ba47abd" class="">GRICA, Facultad de Ciencias Agrarias, Universidad de Antioquia</p><p id="8e04e7eb-1bb4-473a-81bd-134d06b74111" class="">
+</p><figure id="ebe64db9-56d0-4e87-a826-e7fbe5964a5d"><a href="https://orcid.org/0000-0001-7795-0184" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">ORCID</div></div><div class="bookmark-href"><img src="https://orcid.org/assets/icons/favicon.ico" class="icon bookmark-icon"/>https://orcid.org/0000-0001-7795-0184</div></div></a></figure><p id="42661b9c-4ee9-4687-9d1a-5ab743182821" class="">https://orcid.org/0000-0002-2169-7260</p><p id="b4a01be5-689e-4506-82fa-8e07a4ab14f1" class="">https://orcid.org/0000-0002-2169-7260</p><hr id="dfb9421f-77e0-44c1-b412-873f14471358"/><hr id="faaa2f20-0d91-4825-9d97-04194b52bf01"/><h1 id="18af1917-97ce-80a1-ad23-ec0d0fcf0dca" class=""><strong><a href="https://plf.onrender.com/">plf.onrender.com</a></strong></h1><h1 id="27b69d15-5a68-4853-ab17-97272d7d7467" class="">Proyecto aprobado por el CODI en 2023: <strong>Desarrollo de un dispositivo electrónico para el monitoreo automático e individualizado de las emisiones de metano entérico en vacas lecheras</strong></h1><figure id="f2c3b2d4-f045-4345-8739-62fc611bb095"><div class="source"><a href="https://youtu.be/g88Bi6UZW2o">https://youtu.be/g88Bi6UZW2o</a></div></figure><ol type="1" id="ebba0105-010e-483f-91bc-fd54862f9ed2" class="numbered-list" start="1"><li>El proyecto propuesto busca desarrollar un sistema de monitoreo para reducir las<br/>emisiones de metano en la industria láctea.<br/></li></ol><ol type="1" id="986a8aae-7245-4386-b863-8e4577e37d20" class="numbered-list" start="2"><li>El impacto académico de la propuesta incluye la generación de nuevo conocimiento,<br/>la publicación de resultados en revistas científicas y la formación de estudiantes.<br/></li></ol><ol type="1" id="d7a4a8ff-27dd-42eb-b392-31958b653c94" class="numbered-list" start="3"><li>El impacto social de la propuesta incluye la contribución a la sostenibilidad de la<br/>industria láctea, la generación de beneficios económicos y ambientales a largo plazo,<br/>y la concientización sobre la importancia de la reducción de emisiones de gases de<br/>efecto invernadero.<br/></li></ol><ol type="1" id="ff653145-c677-4be2-94db-1578d4b8b4c6" class="numbered-list" start="4"><li>El enfoque interdisciplinario es esencial para abordar el problema de manera efectiva<br/>y sostenible en el tiempo, ya que se necesitan diferentes disciplinas para comprender<br/>las interacciones entre factores ambientales, fisiológicos y tecnológicos.<br/></li></ol><figure id="479c9407-ae8a-4279-97ee-7192ee8a35d1" class="link-to-page"><a href="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/Resumen%20del%20proyecto%20de%20Monitoreo%20automa%CC%81tico%20de%20m%20479c9407ae8a427997ee7192ee8a35d1.html"><img class="icon" src="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/Resumen%20del%20proyecto%20de%20Monitoreo%20automa%CC%81tico%20de%20m%20479c9407ae8a427997ee7192ee8a35d1/PrecisionListkFarm.jpg"/>Resumen del proyecto de Monitoreo automático de metano entérico</a></figure><figure id="603c5c78-4486-421f-b919-351ed99c5bac"><div class="source"><a href="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/ASAS_2024_An_electronic_device_for_enteric_methane_emissions_monitoring.pdf">https://prod-files-secure.s3.us-west-2.amazonaws.com/4182f5e6-39eb-45bc-8aa6-4177e8c01680/ed7af1f1-0b2e-4687-9099-eaa6fe5df2c9/ASAS_2024_An_electronic_device_for_enteric_methane_emissions_monitoring.pdf</a></div></figure><hr id="0c626af7-d42e-43da-9e67-e207d820d38a"/><h1 id="6cb6583b-5814-4280-a1ac-3dddbf8cecb2" class=""><strong>Desarrollo de Herramientas para el seguimiento y control de hatos</strong></h1><figure id="a87aea47-d956-4f9c-9c8e-49ab500bada4" class="image"><a href="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/WhatsApp_Image_2024-05-22_at_14.29.05_6b2ac713.jpg"><img style="width:624px" src="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/WhatsApp_Image_2024-05-22_at_14.29.05_6b2ac713.jpg"/></a></figure><figure id="0b8f43fa-c3f9-474b-bc60-e9eb49ba13e7" class="block-color-yellow link-to-page"><a href="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/Resumen%20Ejecutivo%20del%20Proyecto%20IA%20para%20Monitorear%20%200b8f43fac3f9474bbc60e9eb49ba13e7.html"><img class="icon" src="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/Resumen%20Ejecutivo%20del%20Proyecto%20IA%20para%20Monitorear%20%200b8f43fac3f9474bbc60e9eb49ba13e7/WhatsApp_Image_2024-05-22_at_14.29.05_6b2ac713.jpg"/>Resumen Ejecutivo del Proyecto IA para Monitorear la Actividad</a></figure><figure id="48624ad3-f8e4-4a2e-97a9-68d5b446d36e" class="image"><a href="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/Monitoreo.jpg"><img style="width:707.9927978515625px" src="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/Monitoreo.jpg"/></a></figure><figure id="21300267-c90c-4437-b506-13659ca717b9"><div class="source"><a href="https://youtu.be/HiMIZrzv-M0">https://youtu.be/HiMIZrzv-M0</a></div></figure><hr id="ab2d0912-383e-40c2-9a2d-e868548c1c9b"/><div id="d20b00d2-e674-4acd-9266-490d19ce3afb" class="column-list"><div id="104e6133-0caa-4992-8fea-dad5f18121d6" style="width:50%" class="column"><figure id="ce34baf5-6c07-48b3-9b8f-7c9ac9ca3a73"><div class="source"><a href="https://youtu.be/ruCCWtPvrGo">https://youtu.be/ruCCWtPvrGo</a></div></figure></div><div id="a3bde6fa-5d29-4382-98fa-7af0bec9954e" style="width:50%" class="column"><figure id="84544aa4-c7ef-4523-a3b4-689a7c2567e1"><div class="source"><a href="https://youtu.be/9IvN3QDMZ1o">https://youtu.be/9IvN3QDMZ1o</a></div></figure></div></div><p id="6e0f7a23-5ab6-497d-858d-65041be647a4" class="">Ofrecemos sistemas para el monitoreo y la identificación de anormalidades en la producción animal. Estamos enfocados en el ganado vacuno, pero nuestras herramientas son extensibles a otras especies de interés zootécnico. Ofrecemos herramientas</p><ol type="1" id="3dacb0a3-2fa9-4617-8acc-a9bd3ba4ecaf" class="numbered-list" start="1"><li>Conteo de animales en potrero.<figure id="352cf24b-a977-4196-88ff-399e4b23ff7e" class="link-to-page"><a href="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/Deteccio%CC%81n%20de%20objetos%20aplicada%20al%20conteo%20de%20vacuno%20352cf24ba977419688ff399e4b23ff7e.html">Detección de objetos aplicada al conteo de vacunos</a></figure><figure id="a614e5f1-7980-4928-a52d-e0dcb007d103"><div class="source"><a href="https://youtu.be/FCAkwGTaut4">https://youtu.be/FCAkwGTaut4</a></div></figure></li></ol><ol type="1" id="83369b0c-7ef0-460d-8e7c-b90595e383a9" class="numbered-list" start="2"><li>Identificación de problemas de locomoción</li></ol><div id="9cf5aa44-c281-4ff3-9496-dfb26208a146" class="column-list"><div id="684b47da-da9e-40f0-8ebe-6b0bb1d39cc0" style="width:33.33333333333333%" class="column"><figure id="6169b17f-ffe5-4bbb-94e3-9596029d4017" class="link-to-page"><a href="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/Visio%CC%81n%20artificial%20aplicada%20al%20monitoreo%20de%20vacuno%206169b17fffe54bbb94e39596029d4017.html">Visión artificial aplicada al monitoreo de vacunos: Detección de posición</a></figure></div><div id="3e5de29e-fd83-4f25-92c9-e55e491b173f" style="width:33.333333333333336%" class="column"><figure id="ce9c7cfa-ec2b-4da0-8d11-02def72630e1"><div class="source"><a href="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/2313-EvaluationRamirez.oki.13042024(1).pdf">2313-Evaluation+Ramirez.oki.13042024+(1).pdf</a></div></figure></div><div id="cecb8897-d237-467c-8aba-6d23da66bdcc" style="width:33.333333333333336%" class="column"><p id="ca6ba213-02c3-461c-b718-6bbd9f32d6e5" class="">
+</p></div></div><ol type="1" id="f51af423-d5ef-4053-a78b-8a9a9cf7a8eb" class="numbered-list" start="1"><li>Identificación de la actividad del hato (pastoreo, descanso, celo)<figure id="3cc25f91-da6d-4a88-bc90-c621aff782a9" class="link-to-page"><a href="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/Utilizacio%CC%81n%20de%20dispositivos%20Android%20para%20el%20monit%203cc25f91da6d4a88bc90c621aff782a9.html">Utilización de dispositivos Android para el monitoreo de la actividad de vacunos en pastoreo</a></figure></li></ol><div id="9aa16972-00ab-43ef-a7b1-b8dca23e1c00" class="column-list"><div id="3837ea19-c3d5-48a7-9a28-192b0951f1fc" style="width:50.000000000000014%" class="column"><ol type="1" id="72d9a078-52b7-496f-9fbe-73524de827d7" class="numbered-list" start="1"><li>Registro diario del Score de Condición Corporal (en desarrollo)<figure id="4310a718-f8c7-47d4-90f4-d11324e2517b"><div class="source"><a href="https://youtu.be/K0HbRomW8ec">https://youtu.be/K0HbRomW8ec</a></div></figure></li></ol></div><div id="bc41b0fc-fc18-4f48-8f86-1863fda0b112" style="width:50%" class="column"><figure id="ea52f85e-4614-41d1-98e1-4359f5c2d98b"><div class="source"><a href="https://youtu.be/U-jgrrEXI9U">https://youtu.be/U-jgrrEXI9U</a></div></figure></div></div><ol type="1" id="8b045cb9-f2ff-46e4-b90e-6909c8a2e09c" class="numbered-list" start="1"><li>Detección temprana de mastitis (en desarrollo)</li></ol><ol type="1" id="d8b1cadb-af34-4804-9a29-bb90310072db" class="numbered-list" start="2"><li>Aplicaciones de sonido<figure id="7dd3a768-8f68-4b3d-ae55-1d8236f526b3" class="link-to-page"><a href="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/Clasificacio%CC%81n%20automa%CC%81tica%20de%20andares%20equinos%207dd3a7688f684b3dae551d8236f526b3.html">Clasificación automática de andares equinos</a></figure></li></ol><h2 id="6e57d354-e71f-446d-a43d-6f5f8ce4b947" class=""><strong>Metodología</strong></h2><p id="a53bb1f4-542a-456f-828a-034e746cbd37" class="">La implementación de cualquiera de nuestras herramientas en finca consta de estos pasos:</p><ol type="1" id="9d5d8c6f-219f-411d-96cd-774855d3778e" class="numbered-list" start="1"><li>Toma de videos e imágenes en finca</li></ol><ol type="1" id="58604482-2a7f-4559-b13b-57d6d060ae34" class="numbered-list" start="2"><li>Creación de base de datos</li></ol><ol type="1" id="51e25ae9-dfe0-431f-8d20-4aa25a71c9ee" class="numbered-list" start="3"><li>Adaptación del sistema a las necesidades de la finca</li></ol><ol type="1" id="39b31152-06db-46b3-9d9a-66fa495ccc9a" class="numbered-list" start="4"><li>Validación del sistema en finca</li></ol><ol type="1" id="600c70c9-4794-46e3-8af2-a568cf027790" class="numbered-list" start="5"><li>Implementación del sistema</li></ol><ol type="1" id="b767658b-e540-4a1d-a1b6-203efa44edb0" class="numbered-list" start="6"><li>Capacitación al personal de finca para la utilización del sistema</li></ol><ol type="1" id="7725275b-f6f3-4f66-864f-d4e20740cb5c" class="numbered-list" start="7"><li>Actualización, reparación y mantenimiento técnico de los sistemas</li></ol><hr id="cde7c4b1-1777-4683-9d2d-f7bc53e362cf"/><div id="a2ae2c81-2694-4b5f-8778-11be0bdc9979" class="column-list"><div id="00666640-063d-4db2-8859-bb36e4b3f2e2" style="width:50%" class="column"><figure id="8d03b8fa-d190-46c9-94f5-c137fe206086"><div class="source"><a href="https://youtu.be/p0jV2UPR7dc">https://youtu.be/p0jV2UPR7dc</a></div></figure></div><div id="8d1c2852-f0c6-4d66-91a5-f9c36f12a011" style="width:50%" class="column"><figure id="7d2b8d8e-b700-47e0-baf8-27dbfd8c352d"><div class="source"><a href="https://youtu.be/JxvEPisv6rI">https://youtu.be/JxvEPisv6rI</a></div></figure></div></div><p id="c29b5c0b-0d60-494e-8f51-645b8a28a8b9" class="">
+</p><p id="ac74f842-e26b-49f6-b792-db359eba9b3c" class="">
+</p><figure id="1501786d-7003-4d74-9eae-ec527dc9354f"><div class="source"><a href="https://youtu.be/xS-F_EHuMEQ">https://youtu.be/xS-F_EHuMEQ</a></div></figure><figure id="2143e736-7310-4d67-8e3f-1ff9efd3ebe1"><a href="https://entericmethane.herokuapp.com" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">EMMA - WEB SERVICE</div><div class="bookmark-description">Hjelkrem, A. G. R., Höglind, M., van Oijen, M., Schellberg, J., Gaiser, T., &amp; Ewert, F. (2017). Sensitivity analysis and Bayesian calibration for testing robustness of the BASGRA model in different environments. Ecological modelling, 359, 80-91.</div></div><div class="bookmark-href">https://entericmethane.herokuapp.com</div></div></a></figure><figure id="15bb771c-b69e-4103-8e38-13b1c08110fe"><a href="https://colab.research.google.com/drive/1QrENCCD9WPBCFiEcAhmXfRK5M_ZCmqyk" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Google Colaboratory</div></div><div class="bookmark-href"><img src="https://colab.research.google.com/favicon.ico" class="icon bookmark-icon"/>https://colab.research.google.com/drive/1QrENCCD9WPBCFiEcAhmXfRK5M_ZCmqyk</div></div><img src="https://colab.research.google.com/img/colab_favicon_256px.png" class="bookmark-image"/></a></figure><figure id="72d73661-78e1-453e-b6a5-01204f20f648"><a href="https://colab.research.google.com/drive/1dnlm69eSJvpgiP1cMzlncilmM1jH6Sci#scrollTo=kz6ngMiY6oBi" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Google Colaboratory</div></div><div class="bookmark-href"><img src="https://colab.research.google.com/favicon.ico" class="icon bookmark-icon"/>https://colab.research.google.com/drive/1dnlm69eSJvpgiP1cMzlncilmM1jH6Sci#scrollTo=kz6ngMiY6oBi</div></div><img src="https://colab.research.google.com/img/colab_favicon_256px.png" class="bookmark-image"/></a></figure><hr id="0bac6156-142e-4295-bb68-593ba1565eac"/><h2 id="55dba34d-67ef-4149-b33a-97fbeff643e5" class="">Apps</h2><hr id="39be8f0a-71a3-486e-b425-84ecbed011f8"/><p id="6bb4896a-1275-491f-8b2d-85e8fa9a3cdd" class="block-color-blue"><strong>Aplicativo para Control lechero</strong></p><figure id="cda1218e-a8f1-4035-a594-80800012a720"><div class="source"><a href="https://app.powerbi.com/view?r=eyJrIjoiYzBmZDEyOGMtOTNjZS00MGNhLWE2ODAtOTIyOTI0MWZhY2EzIiwidCI6Ijk5ZTFlNzIxLTcxODQtNDk4ZS04YWZmLWIyYWQ0ZTUzYzFjMiIsImMiOjR9&amp;embedImagePlaceholder=true">https://app.powerbi.com/view?r=eyJrIjoiYzBmZDEyOGMtOTNjZS00MGNhLWE2ODAtOTIyOTI0MWZhY2EzIiwidCI6Ijk5ZTFlNzIxLTcxODQtNDk4ZS04YWZmLWIyYWQ0ZTUzYzFjMiIsImMiOjR9&amp;embedImagePlaceholder=true</a></div></figure><p id="e3595b28-084d-4b63-99d8-f7cf6c3b1dfc" class="">I</p><figure id="19ef1917-97ce-80ec-8aa2-ed1a5dd1958c"><div class="source"><a href="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/Captulo_Anlisis_de_Leche_como_Herramienta_de_Manejo_Productivo_y_Sanitario_de_Hatos_Lecheros.pdf">attachment:d01d324f-d162-481e-b68e-dab48141c19d:Captulo_Anlisis_de_Leche_como_Herramienta_de_Manejo_Productivo_y_Sanitario_de_Hatos_Lecheros.pdf</a></div></figure><figure id="81618d10-d30b-425a-a00f-8fb6b0a7dba1" class="link-to-page"><a href="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/Aplicacio%CC%81n%20para%20balanceamiento%20de%20racio%CC%81n%20de%20vaca%2081618d10d30b425aa00f8fb6b0a7dba1.html"><span class="icon">🐄</span>Aplicación para balanceamiento de ración de vacas lecheras en producción</a></figure><figure id="a4aeb494-8f5b-4dce-a868-50f5d4d128fa"><a href="https://play.google.com/store/apps/details?id=com.gricaudea.tflite&amp;hl=en" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Cattle Counter - Apps on Google Play</div><div class="bookmark-description">Cattle counting assistant in grasslands</div></div><div class="bookmark-href"><img src="https://www.gstatic.com/android/market_images/web/favicon_v3.ico" class="icon bookmark-icon"/>https://play.google.com/store/apps/details?id=com.gricaudea.tflite&amp;hl=en</div></div><img src="https://play-lh.googleusercontent.com/hIXpCsPnl3GQsaIUB9_-2mrvaSYC9-c9DLukoYeFp1mMGtubYkmvZmyu2yY0KYBFeAg" class="bookmark-image"/></a></figure><figure id="64f2c66c-16d4-4f5a-88ec-65f9d1c6fd12"><a href="https://play.google.com/store/apps/details?id=com.plf.car_grica_udea&amp;hl=en" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Cattle Activity Recognition - Apps on Google Play</div><div class="bookmark-description">The use of collars, pedometers or activity tags is expensive to record cattle&#x27;s behavior in short periods (e.g. 24h). Under this particular situation, the development of low-cost and easy-to-use technologies is relevant. Similar to smartphone apps for human activity recognition, which analyzes data from embedded triaxial accelerometer sensors, we develop an Android app to record activity in cattle.</div></div><div class="bookmark-href"><img src="https://www.gstatic.com/android/market_images/web/favicon_v3.ico" class="icon bookmark-icon"/>https://play.google.com/store/apps/details?id=com.plf.car_grica_udea&amp;hl=en</div></div><img src="https://play-lh.googleusercontent.com/_TbNQGXMfUfmkCjLQmuBzA8ohKlZY6oRzHNXP7ko5Id3dHn3cP65tGAInSRaVhDLXg" class="bookmark-image"/></a></figure><figure id="90ff3785-1e12-40c5-bdbb-575de6999dc7"><a href="https://drive.google.com/drive/folders/1_ci93CJ1fbsMD6hGiDVVBXFHjt7BGsi4" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Google Drive: Sign-in</div></div><div class="bookmark-href"><img src="https://accounts.google.com/favicon.ico" class="icon bookmark-icon"/>https://drive.google.com/drive/folders/1_ci93CJ1fbsMD6hGiDVVBXFHjt7BGsi4</div></div></a></figure><figure id="40d3d1da-397e-4424-a91e-18e676cdf4b3" class="link-to-page"><a href="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/HACIA%20UN%20MODELO%20SOSTENIBLE%20Y%20REGENERATIVO%20EN%20LA%20LE%2040d3d1da397e4424a91e18e676cdf4b3.html"><img class="icon" src="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/HACIA%20UN%20MODELO%20SOSTENIBLE%20Y%20REGENERATIVO%20EN%20LA%20LE%2040d3d1da397e4424a91e18e676cdf4b3/ecologico.png"/>HACIA UN MODELO SOSTENIBLE Y REGENERATIVO EN LA
+LECHERÍA ESPECIALIZADA DEL NORTE DE ANTIOQUIA</a></figure><figure id="5cec838c-6074-40aa-bfd1-35f9f2385aca" class="link-to-page"><a href="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/Asistencia%20te%CC%81cnica%20especializada%20para%20Productores%205cec838c607440aabfd135f9f2385aca.html"><img class="icon" src="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/Asistencia%20te%CC%81cnica%20especializada%20para%20Productores%205cec838c607440aabfd135f9f2385aca/mesa.png"/>Asistencia técnica especializada para Productores Rurales del Departamento de Antioquia: Mejora Genética, Salud de la Ubre, Reproducción y Crianza de Terneras</a></figure><figure id="843da9a2-ab05-48ec-8215-528113ae0798" class="link-to-page"><a href="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/Redes%20de%20cooperacio%CC%81n%20campesina%20para%20la%20provisio%CC%81n%20843da9a2ab0548ec8215528113ae0798.html"><img class="icon" src="https://www.notion.so/icons/network_orange.svg"/>Redes de cooperación campesina para la provisión de productos agrícolas como estrategia de innovación social empresarial.</a></figure><figure id="197f1917-97ce-81d7-968e-d2f1c2f9a573" class="link-to-page"><a href="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/Share%20Concepto%20de%20Aplicacio%CC%81n%20de%20Huella%20de%20Carbono%20197f191797ce81d7968ed2f1c2f9a573.html">Share Concepto de Aplicación de Huella de Carbono</a></figure><p id="199f1917-97ce-81c4-891b-eaadb1eee2ab" class="">
+</p><figure id="199f1917-97ce-8130-942e-cd4ce950c3ee"><div class="source"><a href="PRECISION%20LIVESTOCK%20FARMING%2074b64c38b34d41b0bea9328a30c21610/control-lechero.md">attachment:1f2dcb4b-8d97-4143-84b9-5a51f040b2bc:control-lechero.md</a></div></figure></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
